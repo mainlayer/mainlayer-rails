@@ -13,7 +13,7 @@ module Mainlayer
     module ControllerHelpers
       extend ActiveSupport::Concern
 
-      PAY_ENDPOINT = "https://api.mainlayer.xyz/pay"
+      PAY_ENDPOINT = "https://api.mainlayer.fr/pay"
       private_constant :PAY_ENDPOINT
 
       included do

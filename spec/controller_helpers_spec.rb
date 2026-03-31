@@ -165,7 +165,7 @@ RSpec.describe Mainlayer::Rails::ControllerHelpers do
       allow(controller).to receive(:render) { |args, *| captured_args = args }
       controller.require_mainlayer_payment(resource_id: "res_abc")
 
-      expect(captured_args[:json][:pay_endpoint]).to eq("https://api.mainlayer.xyz/pay")
+      expect(captured_args[:json][:pay_endpoint]).to eq("https://api.mainlayer.fr/pay")
     end
 
     it "returns HTTP 402 status" do
@@ -185,7 +185,7 @@ RSpec.describe Mainlayer::Rails::ControllerHelpers do
   # ---------------------------------------------------------------------------
 
   describe "entitlement check against Mainlayer API (WebMock)" do
-    let(:base_url)   { "https://api.mainlayer.xyz" }
+    let(:base_url)   { "https://api.mainlayer.fr" }
     let(:wallet)     { "wlt_webmock_001" }
     let(:resource)   { "res_inference" }
 
